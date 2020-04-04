@@ -1,0 +1,307 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Yeon Sung";
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+a {
+  color: transparent;
+}
+
+@media all and (max-width: 1299px) {
+  #back-vid,
+  .animatedFire,
+  .tab-container,
+  #contact {
+    display: none;
+  }
+  body {
+    background-image: url("https://images.pexels.com/photos/33601/flame-fire-orange-flammable.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-attachment: fixed;
+  }
+  .title h1 {
+    background-image: linear-gradient(
+      rgb(255, 0, 0),
+      rgba(131, 2, 62, 0.61),
+      rgb(255, 0, 0)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 380%;
+    font-family: "Trade Winds";
+    text-shadow: 0.1em 0.1em 0.1em rgba(255, 255, 255, 0.199);
+  }
+  #mobileContact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(39, 1, 1, 0.699);
+    margin-top: 3%;
+    padding: 2%;
+  }
+  #mobileContact button {
+    background-image: linear-gradient(rgb(65, 65, 65), rgb(0, 0, 0));
+    border: outset 2px rgb(39, 39, 39);
+    border-radius: 15%;
+    padding: 1%;
+    width: 30%;
+  }
+  #mobileContact a {
+    color: red;
+    text-decoration: none;
+    font-size: 70%;
+  }
+  #about {
+    background-color: rgba(39, 1, 1, 0.699);
+    padding: 2%;
+    color: rgb(255, 255, 255);
+    margin-top: 3%;
+  }
+  #about p {
+    font-size: 120%;
+  }
+  #about h1 {
+    font-family: "Trade Winds";
+    text-shadow: 0.01em 0.01em 0.2em rgb(0, 0, 0);
+  }
+  #about a {
+    color: rgb(252, 0, 0);
+    text-decoration: none;
+    text-shadow: 0.01em 0.01em 0.2em rgb(0, 0, 0);
+  }
+  #gallery {
+    display: inline-flexbox;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(39, 1, 1, 0.699);
+    margin-top: 3%;
+    padding: 2%;
+  }
+  #gallery img {
+    display: inline-flexbox;
+    width: 80px;
+    height: 60px;
+    border: inset 2px rgb(51, 51, 51);
+    margin-left: 15px;
+  }
+  .pics {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+  .video p {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding-bottom: 1%;
+  }
+}
+@media all and (min-width: 1300px) {
+  .mobileMenu,
+  .title,
+  #mobileContact {
+    display: none;
+  }
+  #back-vid {
+    width: 100%;
+    position: fixed;
+  }
+
+  /* info-tabs */
+  .container {
+    position: relative;
+  }
+  .tab-container {
+    position: fixed;
+    top: 654px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 23%;
+    background-color: rgba(134, 1, 1, 0.801);
+  }
+  .tab-1,
+  .tab-2,
+  .tab-3 {
+    border-left: outset 2px black;
+    border-top: outset 2px black;
+    padding: 3.5%;
+    display: flex;
+    justify-content: center;
+  }
+  .tab-container a {
+    text-decoration: none;
+    font-size: 200%;
+    color: rgb(255, 255, 255);
+    padding: 1%;
+    transition: 0.5s;
+  }
+  .tab-container a:hover,
+  .tab-container a:focus {
+    color: black;
+    text-shadow: 0.01em 0.01em 0.09em rgb(255, 255, 255);
+  }
+
+  /* Info Sections */
+
+  #about p {
+    width: 60%;
+    color: rgb(255, 255, 255);
+  }
+  #about h1 {
+    color: rgb(255, 255, 255);
+    text-shadow: 0.01em 0.01em 0.2em rgb(0, 0, 0);
+    font-family: "Trade Winds";
+  }
+  #about a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 0.01em 0.01em 0.15em rgb(0, 0, 0);
+    transition: 0.5s;
+  }
+  #about a:hover,
+  #about a:focus {
+    color: black;
+    text-shadow: 0.01em 0.01em 0.15em white;
+  }
+  .animatedFire {
+    position: absolute;
+    width: 35%;
+    top: 10px;
+    left: 970px;
+    border: inset 3px rgb(27, 27, 27);
+  }
+  #about {
+    position: absolute;
+    top: 721px;
+    background-color: rgba(134, 1, 1, 0.801);
+    font-size: 180%;
+    padding: 1%;
+    border-top: solid 1px black;
+    opacity: 0;
+    transform: perspective(1000px) rotateX(-90deg);
+    transition: all 0.5s ease-in-out;
+  }
+  #about.active {
+    position: absolute;
+    top: 275px;
+    background-color: rgba(134, 1, 1, 0.801);
+    padding: 1%;
+    transform: perspective(1000px) rotateX(0deg);
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+  }
+  #gallery {
+    width: 50%;
+    display: inline-flexbox;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 200px;
+    background-color: rgba(134, 1, 1, 0.801);
+    font-size: 180%;
+    padding: 1%;
+    border-top: solid 1px black;
+    transform: perspective(1000px) rotateX(-90deg);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  #gallery.active {
+    position: absolute;
+    width: 100%;
+    top: 172px;
+    background-color: rgba(134, 1, 1, 0.901);
+    font-size: 180%;
+    padding: 1%;
+    border-top: solid 1px black;
+    transform: perspective(1000px) rotateX(0deg);
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+  }
+  .video {
+    width: 45%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+  }
+  .pics {
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    width: 55%;
+    margin-top: -416px;
+  }
+  #gallery img {
+    width: 180px;
+    height: 140px;
+    border: inset 2px rgb(51, 51, 51);
+    transition: all 0.2s ease-in-out;
+    margin-left: 10px;
+  }
+  #gallery img:hover,
+  #gallery img:focus {
+    border: outset 2.5px rgb(255, 0, 0);
+  }
+  #contact {
+    position: absolute;
+    width: 100%;
+    top: 721px;
+    background-color: rgba(134, 1, 1, 0.801);
+    font-size: 180%;
+    padding: 1%;
+    border-top: solid 1px black;
+    transform: perspective(1000px) rotateX(-90deg);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  #contact.active {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 542px;
+    background-color: rgba(134, 1, 1, 0.801);
+    font-size: 180%;
+    padding: 1%;
+    border-top: solid 1px black;
+    transform: perspective(1000px) rotateX(0deg);
+    opacity: 1;
+  }
+  #contact a {
+    color: rgb(148, 0, 20);
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  #contact a:hover,
+  #contact a:focus {
+    text-shadow: 0.01em 0.01em 0.09em white;
+  }
+  #contact button {
+    width: 20%;
+    background-image: linear-gradient(
+      rgb(80, 80, 80),
+      rgb(24, 24, 24),
+      rgb(0, 0, 0)
+    );
+    padding: 1%;
+    border: outset 3px rgb(61, 61, 61);
+    border-radius: 50%;
+    transition: 0.5s;
+  }
+  #contact button:hover,
+  #contact button:focus {
+    padding: 1.5%;
+    border: outset 3px white;
+  }
+}
