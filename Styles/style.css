@@ -1,0 +1,368 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Yeon Sung";
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+a {
+  color: transparent;
+}
+
+@media all and (max-width: 1299px) {
+  #back-vid,
+  .animatedFire,
+  .tab-container,
+  #contact {
+    display: none;
+  }
+  body {
+    background-image: url("Images/orangeflame.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .title h1 {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(red), color-stop(rgba(131, 2, 62, 0.61)), to(red));
+    background-image: linear-gradient(red, rgba(131, 2, 62, 0.61), red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 380%;
+    font-family: "Trade Winds";
+    text-shadow: 0.1em 0.1em 0.1em rgba(255, 255, 255, 0.199);
+  }
+  #mobileContact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: rgba(39, 1, 1, 0.699);
+    margin-top: 3%;
+    padding: 2%;
+  }
+  #mobileContact button {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#414141), to(black));
+    background-image: linear-gradient(#414141, black);
+    border: outset 2px #272727;
+    border-radius: 15%;
+    padding: 1%;
+    width: 30%;
+  }
+  #mobileContact a {
+    color: red;
+    text-decoration: none;
+    font-size: 70%;
+  }
+  #about {
+    background-color: rgba(39, 1, 1, 0.699);
+    padding: 2%;
+    color: white;
+    margin-top: 3%;
+  }
+  #about p {
+    font-size: 120%;
+  }
+  #about h1 {
+    font-family: "Trade Winds";
+    text-shadow: 0.01em 0.01em 0.2em black;
+  }
+  #about a {
+    color: #fc0000;
+    text-decoration: none;
+    text-shadow: 0.01em 0.01em 0.2em black;
+  }
+  #gallery {
+    display: inline-flexbox;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: rgba(39, 1, 1, 0.699);
+    margin-top: 3%;
+    padding: 2%;
+  }
+  #gallery img {
+    display: inline-flexbox;
+    width: 80px;
+    height: 60px;
+    border: inset 2px #333333;
+    margin-left: 15px;
+  }
+  .pics {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: auto;
+  }
+  .video p {
+    color: white;
+    text-align: center;
+    padding-bottom: 1%;
+  }
+}
+
+@media all and (min-width: 1300px) {
+  .mobileMenu,
+  .title,
+  #mobileContact {
+    display: none;
+  }
+  #back-vid {
+    width: 100%;
+    position: fixed;
+  }
+  /* info-tabs */
+  .container {
+    position: relative;
+  }
+  .tab-container {
+    position: fixed;
+    top: 654px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 23%;
+    background-color: rgba(134, 1, 1, 0.801);
+  }
+  .tab-1,
+  .tab-2,
+  .tab-3 {
+    border-left: outset 2px black;
+    border-top: outset 2px black;
+    padding: 3.5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .tab-container a {
+    text-decoration: none;
+    font-size: 200%;
+    color: white;
+    padding: 1%;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .tab-container a:hover,
+  .tab-container a:focus {
+    color: black;
+    text-shadow: 0.01em 0.01em 0.09em white;
+  }
+  /* Info Sections */
+  #about p {
+    width: 60%;
+    color: white;
+  }
+  #about h1 {
+    color: white;
+    text-shadow: 0.01em 0.01em 0.2em black;
+    font-family: "Trade Winds";
+  }
+  #about a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 0.01em 0.01em 0.15em black;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  #about a:hover,
+  #about a:focus {
+    color: black;
+    text-shadow: 0.01em 0.01em 0.15em white;
+  }
+  .animatedFire {
+    position: absolute;
+    width: 35%;
+    top: 10px;
+    left: 970px;
+    border: inset 3px #1b1b1b;
+  }
+  #about {
+    position: absolute;
+    top: 721px;
+    background-color: rgba(134, 1, 1, 0.801);
+    font-size: 180%;
+    padding: 1%;
+    border-top: solid 1px black;
+    opacity: 0;
+    -webkit-transform: perspective(1000px) rotateX(-90deg);
+            transform: perspective(1000px) rotateX(-90deg);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  #about.active {
+    position: absolute;
+    top: 275px;
+    background-color: rgba(134, 1, 1, 0.801);
+    padding: 1%;
+    -webkit-transform: perspective(1000px) rotateX(0deg);
+            transform: perspective(1000px) rotateX(0deg);
+    opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  #gallery {
+    width: 50%;
+    display: inline-flexbox;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    top: 200px;
+    background-color: rgba(134, 1, 1, 0.801);
+    font-size: 180%;
+    padding: 1%;
+    border-top: solid 1px black;
+    -webkit-transform: perspective(1000px) rotateX(-90deg);
+            transform: perspective(1000px) rotateX(-90deg);
+    opacity: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  #gallery.active {
+    position: absolute;
+    width: 100%;
+    top: 172px;
+    background-color: rgba(134, 1, 1, 0.901);
+    font-size: 180%;
+    padding: 1%;
+    border-top: solid 1px black;
+    -webkit-transform: perspective(1000px) rotateX(0deg);
+            transform: perspective(1000px) rotateX(0deg);
+    opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  .video {
+    width: 45%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .pics {
+    float: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 55%;
+    margin-top: -416px;
+  }
+  #gallery img {
+    width: 180px;
+    height: 140px;
+    border: inset 2px #333333;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    margin-left: 10px;
+  }
+  #gallery img:hover,
+  #gallery img:focus {
+    border: outset 2.5px red;
+  }
+  #contact {
+    position: absolute;
+    width: 100%;
+    top: 721px;
+    background-color: rgba(134, 1, 1, 0.801);
+    font-size: 180%;
+    padding: 1%;
+    border-top: solid 1px black;
+    -webkit-transform: perspective(1000px) rotateX(-90deg);
+            transform: perspective(1000px) rotateX(-90deg);
+    opacity: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  #contact.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 542px;
+    background-color: rgba(134, 1, 1, 0.801);
+    font-size: 180%;
+    padding: 1%;
+    border-top: solid 1px black;
+    -webkit-transform: perspective(1000px) rotateX(0deg);
+            transform: perspective(1000px) rotateX(0deg);
+    opacity: 1;
+  }
+  #contact a {
+    color: #940014;
+    text-decoration: none;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  #contact a:hover,
+  #contact a:focus {
+    text-shadow: 0.01em 0.01em 0.09em white;
+  }
+  #contact button {
+    width: 20%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#505050), color-stop(#181818), to(black));
+    background-image: linear-gradient(#505050, #181818, black);
+    padding: 1%;
+    border: outset 3px #3d3d3d;
+    border-radius: 50%;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  #contact button:hover,
+  #contact button:focus {
+    padding: 1.5%;
+    border: outset 3px white;
+  }
+}
+/*# sourceMappingURL=style.css.map */
