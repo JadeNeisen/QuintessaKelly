@@ -13,7 +13,7 @@ a {
   color: transparent;
 }
 
-@media all and (max-width: 1299px) {
+@media all and (max-width: 764px) {
   #back-vid,
   .animatedFire,
   .tab-container,
@@ -21,7 +21,7 @@ a {
     display: none;
   }
   body {
-    background-image: url("Images/orangeflame.jpg");
+    background-image: url("/Images/orangeflame.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -89,6 +89,99 @@ a {
     display: inline-flexbox;
     width: 80px;
     height: 60px;
+    border: inset 2px rgb(51, 51, 51);
+    margin-left: 15px;
+  }
+  .pics {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+  .video p {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding-bottom: 1%;
+  }
+}
+@media all and (min-width: 765px) and (max-width: 1299px) {
+  #back-vid,
+  .animatedFire,
+  .tab-container,
+  #contact {
+    display: none;
+  }
+  body {
+    background-image: url("/Images/orangeflame.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .title h1 {
+    background-image: linear-gradient(
+      rgb(255, 0, 0),
+      rgba(131, 2, 62, 0.61),
+      rgb(255, 0, 0)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 600%;
+    font-family: "Trade Winds";
+    text-shadow: 0.1em 0.1em 0.1em rgba(255, 255, 255, 0.199);
+  }
+  #mobileContact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(39, 1, 1, 0.699);
+    margin-top: 3%;
+    padding: 2%;
+  }
+  #mobileContact button {
+    background-image: linear-gradient(rgb(65, 65, 65), rgb(0, 0, 0));
+    border: outset 2px rgb(39, 39, 39);
+    border-radius: 15%;
+    padding: 1%;
+    width: 30%;
+  }
+  #mobileContact a {
+    color: red;
+    text-decoration: none;
+    font-size: 120%;
+  }
+  #about {
+    background-color: rgba(39, 1, 1, 0.699);
+    padding: 2%;
+    color: rgb(255, 255, 255);
+    margin-top: 3%;
+  }
+  #about p {
+    font-size: 200%;
+  }
+  #about h1 {
+    font-family: "Trade Winds";
+    text-shadow: 0.01em 0.01em 0.2em rgb(0, 0, 0);
+    font-size: 250%;
+  }
+  #about a {
+    color: rgb(252, 0, 0);
+    text-decoration: none;
+    text-shadow: 0.01em 0.01em 0.2em rgb(0, 0, 0);
+  }
+  #gallery {
+    display: inline-flexbox;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(39, 1, 1, 0.699);
+    margin-top: 3%;
+    padding: 2%;
+  }
+  #gallery img {
+    display: inline-flexbox;
+    width: 200px;
+    height: 180px;
     border: inset 2px rgb(51, 51, 51);
     margin-left: 15px;
   }
